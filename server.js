@@ -26,14 +26,7 @@ app.use((req,res,next)=>{
 });
  */
 app.get('/',(req,res)=>{
-//res.send('<h1>Hello World Devil this side</h1>');
-/* res.send({
-    name:'Devil',
-    likes:[
-        'Food',
-        'Hiking'
-    ]
-}) */
+
 
 res.render('home.hbs',{
     Title:"Devil's Pc",
@@ -47,6 +40,10 @@ res.render('about.hbs',{
     authorsName: 'About Page',
     //Copyright: new Date().getFullYear()
 });
+});
+
+app.get('/projects',(req,res)=>{
+    res.render('portfolio.hbs');
 });
 
 app.listen(port,()=>{
